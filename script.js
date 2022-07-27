@@ -1,4 +1,5 @@
-import { showInfoModal } from "/knh-dancing/modal.js"
+//import { showInfoModal } from "/knh-dancing/modal.js"
+import { showInfoModal } from "/modal.js"
 
 const DELAY_TIME = 500;
 const CORRECT_SEQUENCE = [
@@ -32,27 +33,51 @@ document.querySelectorAll('.tile').forEach(item => {
     item.addEventListener('click', event => {
         
             if(event.target.classList.contains("left") & originPositionLeft){
-                document.querySelector("#tile3_3_left").classList.toggle("glowUp");
+                document.querySelector("#tile3_3_left").classList.toggle("glowUpLeft");
                 originPositionLeft=false;
             }
             if(event.target.classList.contains("right") & originPositionRight){
-                document.querySelector("#tile3_3_right").classList.toggle("glowUp");
+                document.querySelector("#tile3_3_right").classList.toggle("glowUpRight");
                 originPositionRight=false;
             }
 
-            event.target.classList.toggle("glowUp")  
-            currentSequence.push(event.target.id)
-            document.body.classList.toggle('makeDark')
-            
-            for (const td of tds) {
-              td.classList.toggle("grid")
+            if(event.target.classList.contains("left")){
+              event.target.classList.toggle("glowUpLeft")  
+              currentSequence.push(event.target.id)
+              document.body.classList.add('makeDark')
+              for (const td of tds) {
+                td.classList.toggle("grid")
+              }
             }
+
+            if(event.target.classList.contains("right")){
+              event.target.classList.toggle("glowUpRight")  
+              currentSequence.push(event.target.id)
+              document.body.classList.toggle('makeDark')
+              for (const td of tds) {
+                td.classList.toggle("grid")
+              }
+            }
+
+            
+          
+           
+            
+            
+            
+            
             //event.target.classList.toggle("shadow")
 
       setTimeout(function(){
-        event.target.classList.toggle("glowUp");
+        if(event.target.classList.contains("right")){
+          event.target.classList.toggle("glowUpRight");
+        }
+        if(event.target.classList.contains("left")){
+          event.target.classList.toggle("glowUpLeft");
+        }
+
         document.body.classList.toggle('makeDark')
-        document.body.classList.toggle('original')
+        //ocument.body.classList.toggle('original')
         for (const td of tds) {
           td.classList.toggle("grid")
         }
@@ -81,8 +106,8 @@ let arraysMatch = function (arr1, arr2) {
 };
 
 let startGame = function(){
-    document.querySelector("#tile3_3_left").classList.toggle("glowUp");
-    document.querySelector("#tile3_3_right").classList.toggle("glowUp");
+    document.querySelector("#tile3_3_left").classList.toggle("glowUpLeft");
+    document.querySelector("#tile3_3_right").classList.toggle("glowUpRight");
     document.querySelector("#startbtn").style.visibility = "visible";
     originPositionLeft = true;
     originPositionRight = true;
@@ -97,8 +122,8 @@ let resetGame = function(){
     backgroundmusic.loop=false;
 
     //indicate start position
-    document.querySelector("#tile3_3_left").classList.add("glowUp");
-    document.querySelector("#tile3_3_right").classList.add("glowUp");
+    document.querySelector("#tile3_3_left").classList.add("glowUpLeft");
+    document.querySelector("#tile3_3_right").classList.add("glowUpRight");
     originPositionLeft = true;
     originPositionRight = true;
 

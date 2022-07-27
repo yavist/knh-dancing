@@ -27,8 +27,8 @@ body {
 
 .grid{
     border-width: 1px;
-    border-style: groove;
-    border-color: #c9bb8d36;
+    border-style: solid;
+    border-color: #c9bb8d52;
 }
 
 .left {
@@ -45,8 +45,17 @@ body {
     background-image: url(foot_right.svg);
 }
 
-.glowUp{
-    background-color: #dfcf9d;
+.glowUpLeft{
+    background-color: rgba(148, 180, 159, 0.5);
+}
+
+.glowUpRight{
+    background-color: rgba(236, 179, 144, 0.5);
+}
+
+.statusTop{
+    border-top-style: solid;
+    border-top-width: 5px;
 }
 
 .makeDark{
