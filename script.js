@@ -15,7 +15,9 @@ const CORRECT_SEQUENCE = [
   "tile4_3_left",
   "tile3_3_left",
   "tile3_4_right",
-  "tile3_2_left"
+  "tile3_3_right",
+  "tile3_2_left",
+  "tile3_3_left"
 ]
 
 
