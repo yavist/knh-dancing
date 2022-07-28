@@ -1,5 +1,5 @@
-//import { showInfoModal } from "/knh-dancing/modal.js"
-import { showInfoModal } from "/modal.js"
+import { showInfoModal } from "/knh-dancing/modal.js"
+//import { showInfoModal } from "/modal.js"
 
 const DELAY_TIME = 500;
 const CORRECT_SEQUENCE = [
