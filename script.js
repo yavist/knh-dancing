@@ -83,6 +83,9 @@ document.querySelectorAll('.tile').forEach(item => {
         }
         //event.target.classList.toggle("shadow")
       }, DELAY_TIME);
+      if(currentSequence.length > CORRECT_SEQUENCE.length + 2){
+        showInfoModal("FALSCH!", "Das war nicht ganz richtig. Versucht es nichmal", "Okay", "darkred")
+      }
       console.log(currentSequence)
       if(arraysMatch(currentSequence,CORRECT_SEQUENCE)){
         showInfoModal("GESCHAFFT!", "Ihr habt es geschafft. Das Lösungswort lautet: 'xxx'", "Juhu.", "#76BA99")
