@@ -29,6 +29,10 @@ let originPositionRight;
 var backgroundmusic = new Audio('background.mp3');
 const tds = document.querySelectorAll("td") 
 
+for (const td of tds) {
+  td.classList.toggle("grid")
+}
+
 document.querySelectorAll('.tile').forEach(item => {
     item.addEventListener('click', event => {
         
@@ -45,18 +49,14 @@ document.querySelectorAll('.tile').forEach(item => {
               event.target.classList.toggle("glowUpLeft")  
               currentSequence.push(event.target.id)
               document.body.classList.add('makeDark')
-              for (const td of tds) {
-                td.classList.toggle("grid")
-              }
+              
             }
 
             if(event.target.classList.contains("right")){
               event.target.classList.toggle("glowUpRight")  
               currentSequence.push(event.target.id)
               document.body.classList.toggle('makeDark')
-              for (const td of tds) {
-                td.classList.toggle("grid")
-              }
+              
             }
 
             
@@ -78,9 +78,6 @@ document.querySelectorAll('.tile').forEach(item => {
 
         document.body.classList.toggle('makeDark')
         //ocument.body.classList.toggle('original')
-        for (const td of tds) {
-          td.classList.toggle("grid")
-        }
         //event.target.classList.toggle("shadow")
       }, DELAY_TIME);
       if(currentSequence.length > CORRECT_SEQUENCE.length + 2){
