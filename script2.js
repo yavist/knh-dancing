@@ -3,14 +3,22 @@ import { showInfoModal } from "/knh-dancing/modal.js"
 
 const DELAY_TIME = 500;
 const CORRECT_SEQUENCE = [
+  ["tile3_4_right", 
+  "tile3_4_left", 
+  "tile3_5_right", 
+  "tile3_5_left", 
+  "tile3_4_left", 
+  "tile3_4_right", 
+  "tile3_3_left", 
+  "tile3_3_right", 
+  "tile2_3_left", 
+  "tile3_3_left", 
   "tile4_3_right", 
-   "tile4_3_left", 
-   "tile3_3_left", 
-   "tile3_3_right", 
-   "tile4_3_right", 
-   "tile4_3_left", 
-   "tile3_3_left", 
-   "tile3_3_right"
+  "tile3_3_right", 
+  "tile2_3_left", 
+  "tile3_3_left", 
+  "tile4_3_right", 
+  "tile3_3_right"]
 ]
 
 
