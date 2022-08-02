@@ -1,4 +1,4 @@
-import { showInfoModal } from "/knh-dancing/modal.js"
+import { showInfoModal } from "/knh/bra/t3/dancingfeet/modal.js"
 //import { showInfoModal } from "/modal.js"
 
 const DELAY_TIME = 500;
